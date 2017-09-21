@@ -1,0 +1,158 @@
+
+
+body {
+  overflow-x: hidden;
+}
+
+.App {
+  padding-left: 0;
+  -webkit-transition: all 0.5s ease;
+  -moz-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+
+
+.App-logo {
+  animation: App-logo-spin infinite 20s linear;
+  height: 80px;
+}
+
+.App-header {
+  background-color: #222;
+  height: 150px;
+  padding: 20px;
+  color: white;
+}
+
+@keyframes App-logo-spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+
+.App-wrapper.toggled {
+  padding-left: 250px;
+}
+
+.App-sidebar {
+  z-index: 1000;
+  position: fixed;
+  left: 150px;
+  width: 50px;
+  height: 100%;
+  margin-left: -150px;
+  overflow-y: auto;
+  background-color: #222;
+  -webkit-transition: all 0.5s ease;
+  -moz-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+
+.App-wrapper.toggled .App-sidebar {
+  width: 250px;
+}
+
+.App-content {
+  width: 100%;
+  position: absolute;
+  padding: 15px;
+  margin-left: 50px;
+}
+
+.App-wrapper.toggled .App-content  {
+  position: absolute;
+  margin-right: -150px;
+  margin-left: 0;
+}
+
+
+/* Sidebar Styles */
+
+.sidebar-nav {
+  position: absolute;
+  top: 0;
+  width: 150px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.sidebar-nav li {
+  text-indent: 20px;
+  line-height: 40px;
+}
+
+.App-wrapper .sidebar-nav li.toggled {
+    border-bottom: solid 1px #eff;
+    border-top: solid 1px #eff;
+    text-align: left;
+}
+.App-wrapper.toggled .sidebar-nav li.toggled {
+    text-align: center;
+}
+
+
+
+.sidebar-nav li a {
+  display: block;
+  text-decoration: none;
+  color: #999999;
+}
+
+.sidebar-nav li:hover {
+  text-decoration: none;
+  background: rgba(255, 255, 255, 0.2);
+  cursor:pointer
+}
+
+.sidebar-nav li i {
+  color: #fff;
+  display: inline;
+  margin-right: 20px;
+}
+
+.sidebar-nav li a:active, .sidebar-nav li a:focus {
+  text-decoration: none;
+}
+
+.sidebar-nav>.sidebar-brand {
+  height: 65px;
+  font-size: 18px;
+  line-height: 60px;
+}
+
+.sidebar-nav>.sidebar-brand a {
+  color: #999999;
+}
+
+.sidebar-nav>.sidebar-brand a:hover {
+  color: #fff;
+  background: none;
+}
+
+@media(min-width:768px) {
+  .App {
+    padding-left: 0;
+  }
+  .App-wrapper.toggled {
+    padding-left: 150px;
+  }
+  .App-sidebar{
+    width: 50px;
+  }
+  .App-wrapper.toggled .App-sidebar {
+    width: 150px;
+  }
+  .App-content  {
+    padding: 20px;
+    position: relative;
+    margin-left: 50px;
+  }
+  .App-wrapper.toggled .App-content {
+    position: relative;
+    margin-right: 0;
+    margin-left: 0;
+  }
+}
