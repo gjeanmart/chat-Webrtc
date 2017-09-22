@@ -10,7 +10,6 @@ class MessageInput extends Component {
         }
 
         this.keyHandler = this.keyHandler.bind(this);
-        
     }
     
     keyHandler(event) {

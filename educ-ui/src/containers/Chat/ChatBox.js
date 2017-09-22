@@ -16,7 +16,7 @@ class ChatBox extends Component {
 
     componentDidMount() {
         this.chatProxy = this.props.chatProxy;
-        this.chatProxy.connect(this.props.username);
+        this.chatProxy.connect({username: this.props.username, channel: this.props.channel});
         this.chatProxy.onMessage(this.addMessage.bind(this));
         this.chatProxy.onUserConnected(this.userConnected.bind(this));
         this.chatProxy.onUserDisconnected(this.userDisconnected.bind(this));
