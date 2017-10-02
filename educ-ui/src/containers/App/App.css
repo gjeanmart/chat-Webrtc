@@ -25,9 +25,28 @@ body {
   color: white;
 }
 
+.footer {
+    background-color: #222;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    height: 50px;
+    padding: 10px;
+    width: 100%;
+    overflow:hidden;
+}
+
 @keyframes App-logo-spin {
   from { transform: rotate(0deg); }
   to { transform: rotate(360deg); }
+}
+
+
+
+
+
+.App-wrapper {
+    background-color: #222;
 }
 
 
@@ -59,6 +78,7 @@ body {
   position: absolute;
   padding: 15px;
   margin-left: 50px;
+    background-color: white;
 }
 
 .App-wrapper.toggled .App-content  {
